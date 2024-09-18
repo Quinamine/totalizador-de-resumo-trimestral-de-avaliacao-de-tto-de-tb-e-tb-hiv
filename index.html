@@ -12,7 +12,7 @@
         <meta content=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-avaliacao-de-tto-de-tb-e-tb-hiv/index.html property=og:url>
         <meta content="Totaliza automaticamente o resumo trimestral de avaliação de tratamento de TB e TB/HIV com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
         <meta content=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-avaliacao-de-tto-de-tb-e-tb-hiv/imagens/totalizador-de-resumo-trimestral-de-avaliacao-de-tto-de-tb-e-tb-hiv.png property=og:image>
-        <link href=favicon.png rel="shortcut icon" type=image/x-icon>
+        <link href=favicon.ico rel="shortcut icon" type=image/x-icon>
         <link href=anatomia/reset.css rel=stylesheet>
         <link href=anatomia/layout.css rel=stylesheet>
         <link href=anatomia/ficha.css rel=stylesheet>
@@ -51,7 +51,7 @@
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--imprimir">
                                 <span class="header__menu__item--hide-on-mobile --cursor-pointer">Imprimir</span>
-                                <span class="header__menu__item--hide-on-desktop --cursor-pointer">Salvar<br>como&nbsp;PDF</span>
+                                <span class="header__menu__item--hide-on-desktop --cursor-pointer">Salvar&nbsp;como&nbsp;PDF</span>
                             </button>
                         </li>
                         <li class="header__menu__li header__menu__item--hide-on-mobile">
@@ -105,9 +105,12 @@
 							<input type="text" id="input-provincia" list="datalist-provincias" class="input-nao-celular --fw-700 --border-b">
                             <datalist id="datalist-provincias"></datalist>
 						</div>
-						<div class="ficha__col-de-localizacao__linha ficha__col-de-localizacao__linha--border-t --display-flex-y-center">
-							<label for="input-periodo">Mês de Reporte:</label>
-							<input type="month" id="input-periodo" class="input-nao-celular --fw-700">
+                        <div class="ficha__col-de-localizacao__linha ficha__col-de-localizacao__linha--border-t --display-flex-y-center">
+							<label for="input-periodo">Trimestre em reporte</label>
+						</div>
+						<div class="ficha__col-de-localizacao__linha ficha__col-de-localizacao__linha--margin-t --display-flex-y-center">
+							<label for="input-periodo">Data:</label>
+							<input type="text" id="input-periodo" class="input-nao-celular --fw-700">
 						</div>
 					</div>
 					<div class="ficha__header__col-de-titulo --border-t-thick --border-b-thick">
@@ -142,7 +145,7 @@
                             </div>
                         </div>
                     </header>
-                    <div class="ficha__seccao__body ficha__seccao__body--grid-template-cols-10">
+                    <div class="ficha__seccao__body ficha__seccao__body--1 ficha__seccao__body--grid-template-cols-10">
                         <div class="ficha__col-de-indicadores ficha__col-de-indicadores--seccao-1 --cor-de-fundo-padrao">
                             <span class="--display-flex-y-center --border-b">a) TB Pulmonar Bacteriologicamente confirmada (Novos e Recaídas)</span>
                             <span class="--display-flex-y-center --border-b">b) Tuberculose Pulmonar Clinicamente Diagnosticada (Novos e Recaídas)</span>    
@@ -152,89 +155,520 @@
                             <span class="--display-flex-y-center --border-b">Trabalhador de Saúde</span>
                             <span class="--display-flex-y-center --border-b">Reclusos</span>       
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c1" data-totaleixoyoutput="l4-c1" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c1" data-totaleixoyoutput="l4-c1" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c1" data-totaleixoyoutput="l4-c1" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c1" data-totaleixoyoutput="l4-c1" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c1" data-totaleixoyoutput="l4-c1" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c1" data-totaleixoyoutput="l4-c1" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c1 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c2" data-totaleixoyoutput="l4-c2" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c2" data-totaleixoyoutput="l4-c2" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c2" data-totaleixoyoutput="l4-c2" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c2" data-totaleixoyoutput="l4-c2" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c2" data-totaleixoyoutput="l4-c2" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c2" data-totaleixoyoutput="l4-c2" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c2 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c3" data-totaleixoyoutput="l4-c3" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c3" data-totaleixoyoutput="l4-c3" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c3" data-totaleixoyoutput="l4-c3" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c3" data-totaleixoyoutput="l4-c3" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c3" data-totaleixoyoutput="l4-c3" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c3" data-totaleixoyoutput="l4-c3" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c3 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c4" data-totaleixoyoutput="l4-c4" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c4" data-totaleixoyoutput="l4-c4" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c4" data-totaleixoyoutput="l4-c4" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c4" data-totaleixoyoutput="l4-c4" class="--border-b">
+                            <div class="--cor-de-fundo-padrao --border-b"></div>
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c4" data-totaleixoyoutput="l4-c4" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c4 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c5" data-totaleixoyoutput="l4-c5" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c5" data-totaleixoyoutput="l4-c5" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c5" data-totaleixoyoutput="l4-c5" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c5" data-totaleixoyoutput="l4-c5" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c5" data-totaleixoyoutput="l4-c5" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c5" data-totaleixoyoutput="l4-c5" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c5 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c6" data-totaleixoyoutput="l4-c6" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c6" data-totaleixoyoutput="l4-c6" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c6" data-totaleixoyoutput="l4-c6" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c6" data-totaleixoyoutput="l4-c6" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c6" data-totaleixoyoutput="l4-c6" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c6" data-totaleixoyoutput="l4-c6" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c6 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c7" data-totaleixoyoutput="l4-c7" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c7" data-totaleixoyoutput="l4-c7" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c7" data-totaleixoyoutput="l4-c7" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c7" data-totaleixoyoutput="l4-c7" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c7" data-totaleixoyoutput="l4-c7" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c7" data-totaleixoyoutput="l4-c7" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c7 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c8" data-totaleixoyoutput="l4-c8" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c8" data-totaleixoyoutput="l4-c8" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c8" data-totaleixoyoutput="l4-c8" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c8" data-totaleixoyoutput="l4-c8" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c8" data-totaleixoyoutput="l4-c8" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c8" data-totaleixoyoutput="l4-c8" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c8 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
                         </div>
-                        <div class="ficha__col-de-inputs --border-l">
-                            <input type="number" min="0" data-totaleixox="l1-c1-a-c10" data-totaleixoxoutput="l1-c11" data-totaleixoy="l1-a-l3-c9" data-totaleixoyoutput="l4-c9" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l2-c1-a-c10" data-totaleixoxoutput="l2-c11" data-totaleixoy="l1-a-l3-c9" data-totaleixoyoutput="l4-c9" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l3-c1-a-c10" data-totaleixoxoutput="l3-c11" data-totaleixoy="l1-a-l3-c9" data-totaleixoyoutput="l4-c9" class="--border-b">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--seccao-1 --border-l">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c9" data-totaleixoyoutput="l4-c9" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c9" data-totaleixoyoutput="l4-c9" class="--border-b">
+                            <input type="number" min="0" data-totaleixoy="l1-a-l3-c9" data-totaleixoyoutput="l4-c9" class="--border-b">
                             <input type="number" min="0" readonly class="l4-c9 --border-b">
-                            <input type="number" min="0" data-totaleixox="l5-c1-a-c10" data-totaleixoxoutput="l5-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l6-c1-a-c10" data-totaleixoxoutput="l6-c11" class="--border-b">
-                            <input type="number" min="0" data-totaleixox="l7-c1-a-c10" data-totaleixoxoutput="l7-c11" class="--border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                            <input type="number" min="0" class="input-celular--focus --border-b">
+                        </div>
+                    </div>
+                </section>   
+                <section class="ficha__seccao ficha__seccao--2">
+                    <h2 class="ficha__seccao__titulo --fw-700" id="titulo-da-seccao-2">Secção 2: Tuberculose Pulmonar Bacteriologicamente confirmada (Novos e Recaídas)</h2>
+                    <div class="ficha__seccao__body ficha__seccao__body--2">
+                        <div class="ficha__col-de-indicadores ficha__col-de-indicadores--seccao-2 --cor-de-fundo-padrao">
+                            <span class="--border-b ficha__col-de-indicadores__empty-cell"></span>
+                            <span class="--display-flex-y-center --border-b">Total de Pacientes Notificados (Todas as <br>Formas)</span>
+                            <span class="--display-flex-y-center --border-b">Pacietes que passaram para TTO de 2ª <br>linha</span>
+                            <span class="--display-flex-y-center --border-b">Pacientes avaliados neste período</span>
+                            <span class="--display-flex-y-center --border-b">Curados</span>
+                            <span class="--display-flex-y-center --border-b">Tratamento Completo</span>
+                            <span class="--display-flex-y-center --border-b">Falência de Tratamento</span>
+                            <span class="--display-flex-y-center --border-b">Óbito</span>
+                            <span class="--display-flex-y-center --border-b">Perda de Seguimento</span>   
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="0 - 4">
+                            <span class="--display-flex-xy-center --border-b">0 - 4</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="5 - 9">
+                            <span class="--display-flex-xy-center --border-b">5 - 9</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="10 - 14">
+                            <span class="--display-flex-xy-center --border-b">10 - 14</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="15 - 19">
+                            <span class="--display-flex-xy-center --border-b">15 - 19</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="20 - 24">
+                            <span class="--display-flex-xy-center --border-b">20 - 24</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="25 - 34">
+                            <span class="--display-flex-xy-center --border-b">25 - 34</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="35 - 44">
+                            <span class="--display-flex-xy-center --border-b">35 - 44</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="45 - 54">
+                            <span class="--display-flex-xy-center --border-b">45 - 54</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="55 - 64">
+                            <span class="--display-flex-xy-center --border-b">55 - 64</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="&ge; 65">
+                            <span class="--display-flex-xy-center --border-b">&ge; 65</span>
+                            <input type="number" min="0" data-totaleixox="l8-c1-a-c10" data-totaleixoxoutput="l8-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l9-c1-a-c10" data-totaleixoxoutput="l9-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l10-c1-a-c10" data-totaleixoxoutput="l10-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l11-c1-a-c10" data-totaleixoxoutput="l11-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l12-c1-a-c10" data-totaleixoxoutput="l12-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l13-c1-a-c10" data-totaleixoxoutput="l13-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l14-c1-a-c10" data-totaleixoxoutput="l14-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l15-c1-a-c10" data-totaleixoxoutput="l15-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--total --border-l">
+                            <span class="--display-flex-xy-center --border-b --fw-700">Total</span>
+                            <input type="number" min="0" readonly class="l8-c11 --border-b">
+                            <input type="number" min="0" readonly class="l9-c11 --border-b">
+                            <input type="number" min="0" readonly class="l10-c11 --border-b">
+                            <input type="number" min="0" readonly class="l11-c11 --border-b">
+                            <input type="number" min="0" readonly class="l12-c11 --border-b">
+                            <input type="number" min="0" readonly class="l13-c11 --border-b">
+                            <input type="number" min="0" readonly class="l14-c11 --border-b">
+                            <input type="number" min="0" readonly class="l15-c11 --border-b">
                         </div>
                     </div>
                 </section>
+                <section class="ficha__seccao ficha__seccao--3">
+                    <h2 class="ficha__seccao__titulo --fw-700" id="titulo-da-seccao-2">Secção 3: Retratamentos (Excluir Recaídas) e Tratamento Prévio de TB desconhecido</h2>
+                    <div class="ficha__seccao__body ficha__seccao__body--2">
+                        <div class="ficha__col-de-indicadores ficha__col-de-indicadores--seccao-2 --cor-de-fundo-padrao">
+                            <span class="--border-b ficha__col-de-indicadores__empty-cell"></span>
+                            <span class="--display-flex-y-center --border-b">Total de Pacientes Notificados (Todas as <br>Formas)</span>
+                            <span class="--display-flex-y-center --border-b">Pacietes que passaram para TTO de 2ª <br>linha</span>
+                            <span class="--display-flex-y-center --border-b">Pacientes avaliados neste período</span>
+                            <span class="--display-flex-y-center --border-b">Curados</span>
+                            <span class="--display-flex-y-center --border-b">Tratamento Completo</span>
+                            <span class="--display-flex-y-center --border-b">Falência de Tratamento</span>
+                            <span class="--display-flex-y-center --border-b">Óbito</span>
+                            <span class="--display-flex-y-center --border-b">Perda de Seguimento</span>   
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="0 - 4">
+                            <span class="--display-flex-xy-center --border-b">0 - 4</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="5 - 9">
+                            <span class="--display-flex-xy-center --border-b">5 - 9</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="10 - 14">
+                            <span class="--display-flex-xy-center --border-b">10 - 14</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="15 - 19">
+                            <span class="--display-flex-xy-center --border-b">15 - 19</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="20 - 24">
+                            <span class="--display-flex-xy-center --border-b">20 - 24</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="25 - 34">
+                            <span class="--display-flex-xy-center --border-b">25 - 34</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="35 - 44">
+                            <span class="--display-flex-xy-center --border-b">35 - 44</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="45 - 54">
+                            <span class="--display-flex-xy-center --border-b">45 - 54</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="55 - 64">
+                            <span class="--display-flex-xy-center --border-b">55 - 64</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="&ge; 65">
+                            <span class="--display-flex-xy-center --border-b">&ge; 65</span>
+                            <input type="number" min="0" data-totaleixox="l16-c1-a-c10" data-totaleixoxoutput="l16-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l17-c1-a-c10" data-totaleixoxoutput="l17-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l18-c1-a-c10" data-totaleixoxoutput="l18-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l19-c1-a-c10" data-totaleixoxoutput="l19-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l20-c1-a-c10" data-totaleixoxoutput="l20-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l21-c1-a-c10" data-totaleixoxoutput="l21-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l22-c1-a-c10" data-totaleixoxoutput="l22-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l23-c1-a-c10" data-totaleixoxoutput="l23-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--total --border-l">
+                            <span class="--display-flex-xy-center --border-b --fw-700">Total</span>
+                            <input type="number" min="0" readonly class="l16-c11 --border-b">
+                            <input type="number" min="0" readonly class="l17-c11 --border-b">
+                            <input type="number" min="0" readonly class="l18-c11 --border-b">
+                            <input type="number" min="0" readonly class="l19-c11 --border-b">
+                            <input type="number" min="0" readonly class="l20-c11 --border-b">
+                            <input type="number" min="0" readonly class="l21-c11 --border-b">
+                            <input type="number" min="0" readonly class="l22-c11 --border-b">
+                            <input type="number" min="0" readonly class="l23-c11 --border-b">
+                        </div>
+                    </div>
+                </section>
+                <section class="ficha__seccao ficha__seccao--4">
+                    <h2 class="ficha__seccao__titulo --fw-700" id="titulo-da-seccao-2">Secção 4: HIV POSITIVOS</h2>
+                    <div class="ficha__seccao__body ficha__seccao__body--2">
+                        <div class="ficha__col-de-indicadores ficha__col-de-indicadores--seccao-2 --cor-de-fundo-padrao">
+                            <span class="--border-b ficha__col-de-indicadores__empty-cell"></span>
+                            <span class="--display-flex-y-center --border-b">Total de Pacientes Notificados (Todas as <br>Formas)</span>
+                            <span class="--display-flex-y-center --border-b">Pacietes que passaram para TTO de 2ª <br>linha</span>
+                            <span class="--display-flex-y-center --border-b">Pacientes avaliados neste período</span>
+                            <span class="--display-flex-y-center --border-b">Curados</span>
+                            <span class="--display-flex-y-center --border-b">Tratamento Completo</span>
+                            <span class="--display-flex-y-center --border-b">Falência de Tratamento</span>
+                            <span class="--display-flex-y-center --border-b">Óbito</span>
+                            <span class="--display-flex-y-center --border-b">Perda de Seguimento</span>   
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="0 - 4">
+                            <span class="--display-flex-xy-center --border-b">0 - 4</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="5 - 9">
+                            <span class="--display-flex-xy-center --border-b">5 - 9</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="10 - 14">
+                            <span class="--display-flex-xy-center --border-b">10 - 14</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="15 - 19">
+                            <span class="--display-flex-xy-center --border-b">15 - 19</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="20 - 24">
+                            <span class="--display-flex-xy-center --border-b">20 - 24</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="25 - 34">
+                            <span class="--display-flex-xy-center --border-b">25 - 34</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="35 - 44">
+                            <span class="--display-flex-xy-center --border-b">35 - 44</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="45 - 54">
+                            <span class="--display-flex-xy-center --border-b">45 - 54</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="55 - 64">
+                            <span class="--display-flex-xy-center --border-b">55 - 64</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs --border-l" data-faixaetaria="&ge; 65">
+                            <span class="--display-flex-xy-center --border-b">&ge; 65</span>
+                            <input type="number" min="0" data-totaleixox="l24-c1-a-c10" data-totaleixoxoutput="l24-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l25-c1-a-c10" data-totaleixoxoutput="l25-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l26-c1-a-c10" data-totaleixoxoutput="l26-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l27-c1-a-c10" data-totaleixoxoutput="l27-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l28-c1-a-c10" data-totaleixoxoutput="l28-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l29-c1-a-c10" data-totaleixoxoutput="l29-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l30-c1-a-c10" data-totaleixoxoutput="l30-c11" class="--border-b">
+                            <input type="number" min="0" data-totaleixox="l31-c1-a-c10" data-totaleixoxoutput="l31-c11" class="--border-b">
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--total --border-l">
+                            <span class="--display-flex-xy-center --border-b --fw-700">Total</span>
+                            <input type="number" min="0" readonly class="l24-c11 --border-b">
+                            <input type="number" min="0" readonly class="l25-c11 --border-b">
+                            <input type="number" min="0" readonly class="l26-c11 --border-b">
+                            <input type="number" min="0" readonly class="l27-c11 --border-b">
+                            <input type="number" min="0" readonly class="l28-c11 --border-b">
+                            <input type="number" min="0" readonly class="l29-c11 --border-b">
+                            <input type="number" min="0" readonly class="l30-c11 --border-b">
+                            <input type="number" min="0" readonly class="l31-c11 --border-b">
+                        </div>
+                    </div>
+                </section>
+                <footer class="ficha__rodape">
+                    <div class="ficha__rodape__col-de-nome">
+                        <label for="input-nome">Nome legível do técnico que reporta:</label>
+                        <input type="text" id="input-nome" class="ficha__rodape__campo-de-nome input-nao-celular --fw-700 --border-b">
+                    </div>
+                    <div class="ficha__rodape__col-de-categoria">
+                        <label for="input-categoria">Categoria:</label>
+                        <input type="text" id="input-categoria" list="datalist-categorias" class="ficha__rodape__campo-de-categoria input-nao-celular --fw-700 --border-b">
+                        <datalist id="datalist-categorias">
+                            <option value="Médico de Clínica Geral"></option>
+                            <option value="Técnico de Medicina Geral"></option>
+                            <option value="Enfermeiro Geral"></option>
+                            <option value="Técnico de Estatística Sanitária"></option>
+                        </datalist>
+                    </div>
+                    <div class="ficha__rodape__col-de-data">
+                        <label for="input-data" class="ficha__col-de-data__label">Data</label>
+                        <input type="date" id="input-data" class="input-nao-celular --fw-700 --border-b">
+                    </div>
+                </footer> 
           </div>
             <div class="layout-row layout-row--report-comments layout-row--no-padding">
                 <textarea class="main__campo-de-comentarios input-nao-celular" id="input-comentarios" placeholder="Comentários sobre o resumo (se necessário)." rows=3></textarea>
@@ -243,7 +677,7 @@
                 <div class="layout-row layout-row--of-reference">
                     <span class="reference__label">Indicador:</span> 
                     <output class="reference__output reference__output--indicador --display-flex-y-center"></output>
-                    <span class="reference__label">Faixa etária:</span> 
+                    <span class="reference__label">Coluna:</span> 
                     <output class="reference__output reference__output--idade --display-flex-xy-center --fw-700"></output>
                 </div>
             </div>
@@ -251,7 +685,7 @@
         <section class="dialog-boxes --no-print">
             <div class="dialog-box-default dialog-box-default--sobre-aqd">
                 <h3 class="dialog-box-default__title">Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV</h3>
-                <p class="dialog-box-default__p">O totalizador garante um resumo correctamente totalizado, contudo, a qualidade de um resumo não se limita apenas à uma correcta totalização. Outros factores não dependentes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do período de reporte, concordância dos dados, entre outros, influenciam sobremaneira na qualidade de um resumo trimestral.</p>
+                <p class="dialog-box-default__p">O totalizador garante um resumo correctamente totalizado, contudo, a qualidade de um resumo não se limita apenas à uma correcta totalização. Outros factores não dependentes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do trimestre em reporte, concordância dos dados, entre outros, influenciam sobremaneira na qualidade de um resumo trimestral.</p>
                 <div class="dialog-box-default__btn-container">
                     <button class="dialog-box-default__btn dialog-box-default__btn--aqd">Entendi</button>
                 </div>
@@ -297,11 +731,11 @@
                     </li>
                     <li>
                         <input type=checkbox id=checkbox-periodo checked data-for=input-periodo>
-                        <label for=checkbox-periodo>Período</label>
+                        <label for=checkbox-periodo>Trimestre em reporte</label>
                     </li>
                     <li>
                         <input type=checkbox id=checkbox-nome checked data-for=input-nome>
-                        <label for=checkbox-nome>Nome legível do responsável pelo preenchimento</label>
+                        <label for=checkbox-nome>Nome legível do técnico que reporta</label>
                     </li>
                     <li>
                         <input type=checkbox id=checkbox-categoria checked data-for=input-categoria>
@@ -328,7 +762,7 @@
                 <figure>
                     <img alt="Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV" src=imagens/totalizador-de-resumo-trimestral-de-avaliacao-de-tto-de-tb-e-tb-hiv.png class="artigo__img artigo__img--center">
                 </figure>
-                <p>O <strong>Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV</strong> é um serviço online gratuito que auxilia na elaboração do resumo trimestral de avaliação de tratamento de TB e TB/HIV com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique. Foi criado de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.</p>
+                <p>O <strong>Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV</strong> é um serviço online gratuito que auxilia na elaboração do resumo trimestral de avaliação de tratamento de TB e TB/HIV com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.</p>
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Objectivos</h3>
                 <ul class="artigo__lista artigo__lista--ul">
                     <li>Auxiliar os Profissionais de Saúde na totalização do resumo trimestral de avaliação de tratamento de TB e TB/HIV com exatidão e prontidão;</li>
@@ -341,7 +775,7 @@
                     <li>Ter colhido os dados de todos os indicadores da ficha nas fontes primárias (livro(s) de registo) da sua Unidade Sanitária;</li>
                     <li>E por fim, preencher os dados nas células correspondentes em função das variáveis (indicador, faixa etária e sexo) e consequentemente os respectivos totais são, em tempo real, correcta e automaticamente calculados.</li>
                 </ul>
-                <p class="artigo__p--destaque">O totalizador garante um resumo correctamente totalizado, contudo, a qualidade de um resumo não se limita apenas à uma correcta totalização. Outros factores não dependentes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do período de reporte, concordância dos dados, entre outros, influenciam sobremaneira na qualidade de um resumo trimestral.</p>
+                <p class="artigo__p--destaque">O totalizador garante um resumo correctamente totalizado, contudo, a qualidade de um resumo não se limita apenas à uma correcta totalização. Outros factores não dependentes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do trimestre em reporte, concordância dos dados, entre outros, influenciam sobremaneira na qualidade de um resumo trimestral.</p>
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Qual é o destino dos dados que eu insiro?</h3>
                 <p>São guardados no seu celular ou computador, por meio de um recurso chamado <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API" target="_blank">Web Storage</a> e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "<b>Esvaziar ficha</b>" no menu do totalizador ou excluindo os dados de navegação (histórico) do navegador.</p>
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Vantagens do totalizador</h3>
@@ -413,26 +847,27 @@
                 <nav class=footer__nav>
                     <h4 class="footer__nav__title">Hiperligações para outros serviços afins</h4>
                     <ul>
-						<li><a href=https://quinamine.github.io/totalizador-de-mapa-resumo-mensal-de-caixa/index.html target=_blank class="footer__nav__link">Totalizador de Mapa Resumo Mensal de Caixa</a></li>
-                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Trimestral de APSS/PP</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-mapa-resumo-mensal-de-caixa/index.html target=_blank class="footer__nav__link">Totalizador de Mapa Resumo Mensal de Caixa</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ats/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de ATS</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ccd/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de CCD</a></li>
                         <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Consultas</a></li>
                         <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de HIV/SIDA</a></li>
                         <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-malaria/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Malária</a></li>
-                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-ii/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN II</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-notificacao-de-tb-e-tb-hiv/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Notificação de TB e TB/HIV</a></li>
                         <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-i/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN I</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-ii/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN II</a></li>
                         <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-saaj/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de SAAJ</a></li>
-                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ccd/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de CCD</a></li>
-                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ats/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de ATS</a></li>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Trimestral de APSS/PP</a></li>
                         <li><a href=https://quinamine.github.io/calculadora-de-doses-pediatricas/index.html target=_blank class="footer__nav__link">Calculadora de Doses Pediátricas</a></li>
                         <li><a href=https://quinamine.github.io/requisicao-balancete/index.html target=_blank class="footer__nav__link">Requisição/Balancete</a></li>
-                        <li><a href=https://quinamine.github.io/tarv-pediatrico/index.html target=_blank class="footer__nav__link">TARV Pediátrico</a></li>
-                        <li><a href=https://quinamine.github.io/tat-pediatrico/index.html target=_blank class="footer__nav__link">TAT Pediátrico</a></li>
+                        <li><a href=https://quinamine.github.io/tarv-pediatrico/index.html target=_blank class="footer__nav__link">TARV Pediátrico - Doseador de ARVs, CTZ, INH, 3HP e Lfx</a></li>
+                        <li><a href=https://quinamine.github.io/tat-pediatrico/index.html target=_blank class="footer__nav__link">TAT Pediátrico - Doseador de MATs da 1ª linha, 2ª linha e Piridoxina</a></li>
                     </ul>
                 </nav>
                 <p class="footer__p footer__p--created-by">Criado com atenção e <span class="footer__p__heart">❤</span> por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a> | ©&nbsp;<span class="footer__current-year"></span> Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV</p>
                 <a href=#root class=footer__link--back-to-top>Rolar para o topo</a>
             </div>
-            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2024-05-30">30/05/2024</time>. Última actualização: Setembro/2024.</p>
+            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2024-09-17">17/09/2024</time>.</p>
         </footer>
         <div class="desfoque"></div>
     </body>

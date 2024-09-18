@@ -287,7 +287,7 @@
 }
 .layout-row--of-reference {
     display: grid;
-    grid-template-columns: 53px 500px 68px 60px;
+    grid-template-columns: 53px 500px 45px 200px;
     align-items: center;
     min-height: 28px;
     font-size: 12px;
@@ -308,7 +308,7 @@
 }
 @media screen and (max-width: 810px) {
     .layout-row--of-reference {
-        grid-template-columns: 1fr 60px;
+        grid-template-columns: 2fr 1fr;
         grid-column-gap: 3px;
         padding-left: 0;
         padding-right: 0;

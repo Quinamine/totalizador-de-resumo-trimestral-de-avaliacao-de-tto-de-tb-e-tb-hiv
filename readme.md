@@ -25,7 +25,7 @@ O **Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV
 
 >[!NOTE]
 >
-> O totalizador garante um resumo correctamente totalizado, contudo, a qualidade de um resumo não se limita apenas à uma correcta totalização. Outros factores não dependentes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do trimestre em reporte, concordância dos dados, entre outros, influenciam sobremaneira na qualidade de um resumo trimestral.
+> O totalizador garante um resumo correctamente totalizado, contudo, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores não dependentes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do trimestre em reporte, concordância de dados, entre outros, influenciam sobremaneira na qualidade de um resumo trimestral.
 
 
 ## Qual é o destino dos dados que eu insiro?

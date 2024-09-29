@@ -48,8 +48,8 @@
                             <input type=checkbox id="checkbox-realcar-totais" class="header__menu__checkbox --cursor-pointer">
                             <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center --cursor-pointer">Realçar&nbsp;totais</label>
                         </li>
-                        <li class="header__menu__li">
-                            <button class="header__menu__btn header__menu__btn--ir-para --display-none">Ir para a linha...</button>
+                        <li class="header__menu__li --display-none">
+                            <button class="header__menu__btn header__menu__btn--ir-para">Ir para a linha...</button>
                         </li>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--esvaziar-ficha">Esvaziar ficha</button>
@@ -676,8 +676,9 @@
                     </div>
                 </footer> 
           </div>
-            <div class="layout-row layout-row--report-comments layout-row--no-padding">
-                <textarea class="main__campo-de-comentarios input-nao-celular" id="input-comentarios" placeholder="Comentários sobre o resumo (se necessário)." rows=3></textarea>
+            <div class="layout-row layout-row--obs layout-row--no-padding"">
+                <span class="obs__label --fw-700">Observações:</span>
+                <p contenteditable="true" id="input-obs" class="obs__input"></p>
             </div>
             <div class="reference --no-print">
                 <div class="layout-row layout-row--of-reference">
@@ -752,8 +753,8 @@
 						<label for=checkbox-data>Data</label>
                     </li>
                     <li>
-                        <input type=checkbox id=checkbox-comentarios checked data-for=input-comentarios>
-                        <label for=checkbox-comentarios>Comentários</label>
+                        <input type=checkbox id=checkbox-obs checked data-for=input-obs>
+                        <label for=checkbox-obs>Observações</label>
                     </li>
                 </ul>
                 <div class=dialog-box-esvaziar-ficha__btns-container>

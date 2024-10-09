@@ -105,7 +105,7 @@
     grid-area: col-2;
     display: grid;
     grid-template-rows: 14px 141px;
-    background-color: var(--gray--a);
+    background-color: var(--gray--c);
 }
 .seccao-2__header__linha-com-numeros-das-colunas,
 .seccao-1__header__linha-de-indicadores {
@@ -146,7 +146,7 @@ span.seccao-1__header__indicador-col-3 {
 .ficha__col-de-indicadores,
 .ficha__col-de-inputs {
     display: grid;
-    grid-template-rows: 24.5px repeat(2, 28.5px) repeat(6, 24.5px);
+    grid-template-rows: repeat(2, 24.5px) 28.5px repeat(6, 24.5px);
 }
 .ficha__col-de-indicadores__empty-cell {
     background-color: var(--yt);
@@ -158,7 +158,11 @@ span.seccao-1__header__indicador-col-3 {
 }
 .ficha__col-de-indicadores--seccao-1,
 .ficha__col-de-inputs--seccao-1 {
-    grid-template-rows: repeat(2, 24.5px) 28.5px repeat(4, 24.5px);
+    grid-template-rows: 28.5px 24.5px 28.5px repeat(4, 24.5px);
+}
+.ficha__col-de-indicadores--seccao-2,
+.ficha__col-de-inputs--seccao-2 {
+    grid-template-rows: 24.5px repeat(2, 28.5px) repeat(6, 24.5px);
 }
 .ficha__col-de-indicadores span {
     padding: 2px;
@@ -195,6 +199,9 @@ span.seccao-1__header__indicador-col-3 {
     grid-template-columns: 680px 1fr;
     align-items: center;
 }
+.ficha__rodape__col-de-nome {
+    min-height: 22px;
+}
 .ficha__rodape__campo-de-nome,
 .ficha__rodape__col-de-categoria {
     min-height: 18px;
@@ -209,8 +216,11 @@ span.seccao-1__header__indicador-col-3 {
     width: 196px;
 }
 /* CLASSES REUTILIZÁVEIS */
-.--cor-de-fundo-padrao {
+.celula-nao-aplicavel {
     background-color: var(--gray--a);
+}
+.--cor-de-fundo-padrao {
+    background-color: var(--gray--c);
 }
 .--cor-de-fundo-padrao--discreta {
     background-color: var(--gray--lighter);

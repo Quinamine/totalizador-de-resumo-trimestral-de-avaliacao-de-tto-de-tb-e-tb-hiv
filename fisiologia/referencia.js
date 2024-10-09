@@ -3,10 +3,11 @@ const referencia = {
     retornarIndicador(inputTarget) {
         const indicadorOutput = document.querySelector(".reference__output--indicador");
         const celulaComFocoEirmas = inputTarget.parentElement.children;
+        let indicadores = inputTarget.parentElement.parentElement.children[0].querySelectorAll("span");
+        let tituloDaSeccao = inputTarget.parentElement.parentElement.previousElementSibling;
         let isSection1 = inputTarget.parentElement.parentElement.matches(".ficha__seccao__body--1");
-        let indicadores = document.querySelectorAll(".ficha__col-de-indicadores--seccao-2 span");
         if(isSection1) {
-            indicadores = document.querySelectorAll(".ficha__col-de-indicadores--seccao-1 span");
+            tituloDaSeccao = document.getElementById("titulo-da-seccao-1");
         }
         let celulaFocadaIndex;        
         for(let i = 0; i < celulaComFocoEirmas.length; i++) {
@@ -14,7 +15,7 @@ const referencia = {
                 celulaFocadaIndex = i;
             }
         }
-        indicadorOutput.textContent = indicadores[celulaFocadaIndex].textContent;
+        indicadorOutput.textContent = `${tituloDaSeccao.textContent}: ${indicadores[celulaFocadaIndex].textContent}`;
     },
     retornarColuna(inputTarget) {
         const colunaOutput = document.querySelector(".reference__output--idade");

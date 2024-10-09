@@ -451,6 +451,9 @@
     border-top: 1px solid var(--gray--light);
     padding-top: 20px;
 }
+.artigo__titulo--margin-t {
+    margin-top: 10px;
+}
 .artigo__titulo--no-border-t {
     border-top: none;
     padding-top: 0;

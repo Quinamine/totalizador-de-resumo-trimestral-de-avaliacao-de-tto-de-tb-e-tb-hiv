@@ -1,5 +1,5 @@
 ﻿"use strict"
-var keyPrefix = "trmtb";
+var keyPrefix = "trttb";
 function desfoqueDoFundo(accao) {
     const desfoque = document.querySelector(".desfoque");
     accao === "desfocar" ? 

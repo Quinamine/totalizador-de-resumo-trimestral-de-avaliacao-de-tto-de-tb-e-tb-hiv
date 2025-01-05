@@ -2,7 +2,7 @@
 
 ![Trecho do Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV](imagens/totalizador-de-resumo-trimestral-de-avaliacao-de-tto-de-tb-e-tb-hiv.png)
 
-O **Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV** é um serviço online gratuito que auxilia na elaboração do resumo trimestral de avaliação de tratamento de TB e TB/HIV com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+O **Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV** é um serviço online gratuito que auxilia na elaboração do resumo trimestral de avaliação de tratamento de TB e TB/HIV por meio do cálculo automático dos totais com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.
 
 
 ## Objectivos
@@ -25,7 +25,7 @@ O **Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV
 
 >[!NOTE]
 >
-> O totalizador garante um resumo trimestral correctamente totalizado, porém, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores (que não dependem do totalizador) como preenchimento correcto e legível dos livros de registo, colheita de dados de todos os livros de registo com informação do trimestre em reporte, cruzamento de dados, entre outros, influenciam consideravelmente na qualidade de um resumo trimestral.
+> O totalizador garante um resumo trimestral correctamente totalizado, porém, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores (que não dependem do totalizador) como preenchimento correcto e legível dos livros de registo, colheita de dados de todos os livros de registo com informação do trimestre em reporte, cruzamento e concordância dos dados, entre outros, contribuem sobremaneira para a qualidade de um resumo trimestral.
 
 
 ## Qual é o destino dos dados que eu insiro?

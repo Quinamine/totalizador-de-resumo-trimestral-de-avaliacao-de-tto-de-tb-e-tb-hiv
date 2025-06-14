@@ -1,7 +1,7 @@
 ﻿.ficha {
     width: var(--layout-width);
     margin: 30px auto 14px;
-    color: var(--fullblack);
+    color: var(--black);
 }
 @media print {
     .ficha {
@@ -76,7 +76,7 @@
 .ficha__header__col-de-titulo {
     grid-column: 1/4;
     padding: 5px 0;
-    background-color: var(--fullblack);
+    background-color: var(--black);
     color: var(--yt);
 }
 .ficha__titulo {
@@ -90,7 +90,7 @@
     text-align: center;
     padding: 8px 0;
     text-transform: uppercase;
-    background-color: var(--fullblack);
+    background-color: var(--black);
     color: var(--yt);
 }
 .ficha__seccao__titulo--margin-top {
@@ -105,7 +105,7 @@
     grid-area: col-2;
     display: grid;
     grid-template-rows: 14px 141px;
-    background-color: var(--gray--c);
+    background-color: var(--gray-c);
 }
 .seccao-2__header__linha-com-numeros-das-colunas,
 .seccao-1__header__linha-de-indicadores {
@@ -128,7 +128,7 @@ span.seccao-1__header__indicador-col-3 {
 @media screen and (min-width: 1024px) {
     .seccao-1__header__linha-de-indicadores > div:hover span {
         transform: rotate(0deg) scale(1.2);
-        box-shadow: 0 0 15px var(--gray--d);
+        box-shadow: 0 0 15px var(--gray-d);
         border-radius: 5px;
         background-color: var(--yt);
         padding: 5px;
@@ -217,11 +217,11 @@ span.seccao-1__header__indicador-col-3 {
 }
 /* CLASSES REUTILIZÁVEIS */
 .celula-nao-aplicavel {
-    background-color: var(--gray--a);
+    background-color: var(--gray-a);
 }
 .--cor-de-fundo-padrao {
-    background-color: var(--gray--c);
+    background-color: var(--gray-c);
 }
 .--cor-de-fundo-padrao--discreta {
-    background-color: var(--gray--lighter);
+    background-color: var(--gray-lighter);
 }

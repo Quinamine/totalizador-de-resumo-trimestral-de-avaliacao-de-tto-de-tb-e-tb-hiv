@@ -9,7 +9,7 @@ O **Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV
 
 * Auxiliar os profissionais de saúde na totalização do resumo trimestral de avaliação de tratamento de TB e TB/HIV com exatidão e prontidão;
 
-* Minimizar possíveis erros de totalização (por exemplo, somar involuntariamente células não correspondentes ou registar o total da linha A, na linha B);
+* Minimizar possíveis erros de totalização (por exemplo, somar involuntariamente células não correspondentes ou registar o total da linha "A", na linha "B");
 
 * Expandir o acesso à ficha de resumo trimestral de avaliação de tratamento de TB e TB/HIV.
 

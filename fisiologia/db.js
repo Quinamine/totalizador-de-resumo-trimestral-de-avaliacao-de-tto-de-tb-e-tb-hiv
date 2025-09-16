@@ -740,10 +740,25 @@ function listarUSs() {
         }
     }
 }
+function sugerirTrimestreActual() {
+    const mesDatalist = document.getElementById("datalist-trimestre");
+    const trimestres = ["Janeiro - Março", "Abril - Junho", "Julho - Setembro", "Outubro - Dezembro"];
+    const tempo = new Date();
+    let anoActual = tempo.getFullYear();
+    let mesIndex = tempo.getMonth();
+    let trimestreIndex = (mesIndex < 3) ? 0 
+    : (mesIndex < 6) ? 1 
+    : (mesIndex < 9) ? 2 
+    : 3;
+    for(let i = 0; i <= trimestreIndex; i++) {
+        mesDatalist.innerHTML += `<option value="${trimestres[i]} ${anoActual}"></option>`;
+    }
+}
 window.addEventListener("load", () => {
     listarProvincias();
     listarDistritos();
     listarUSs();
+    sugerirTrimestreActual();
     const inputProv = document.getElementById("input-provincia");
     inputProv.addEventListener("input", listarDistritos);
     const inputDistrito = document.getElementById("input-distrito");

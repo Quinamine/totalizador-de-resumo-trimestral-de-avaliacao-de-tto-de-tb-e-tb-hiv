@@ -1,38 +1,23 @@
 "use strict"
 const referencia = {
-    retornarIndicador(inputTarget) {
+    retornarLinha(inputTarget) {
         const indicadorOutput = document.querySelector(".reference__output--indicador");
-        const celulaComFocoEirmas = inputTarget.parentElement.children;
-        let indicadores = inputTarget.parentElement.parentElement.children[0].querySelectorAll("span");
-        let tituloDaSeccao = inputTarget.parentElement.parentElement.previousElementSibling;
-        let isSection1 = inputTarget.parentElement.parentElement.matches(".ficha__seccao__body--1");
-        if(isSection1) {
-            tituloDaSeccao = document.getElementById("titulo-da-seccao-1");
-        }
-        let celulaFocadaIndex;        
-        for(let i = 0; i < celulaComFocoEirmas.length; i++) {
-            if(inputTarget === celulaComFocoEirmas[i]) {
-                celulaFocadaIndex = i;
-            }
-        }
-        indicadorOutput.textContent = `${tituloDaSeccao.textContent}: ${indicadores[celulaFocadaIndex].textContent}`;
+        let tituloDaSeccao = inputTarget.parentElement.parentElement.querySelector("h2").textContent.toUpperCase();
+        let indicadorLinear = inputTarget.parentElement.children[0].textContent;
+        indicadorOutput.textContent = `${tituloDaSeccao}: ${indicadorLinear}`;
     },
     retornarColuna(inputTarget) {
         const colunaOutput = document.querySelector(".reference__output--idade");
-        let colunas = document.querySelectorAll(".seccao-1__header__linha-de-indicadores span");
-        let isSection1 = inputTarget.parentElement.parentElement.matches(".ficha__seccao__body--1");
+        let colunas = document.querySelectorAll(".ficha__seccao__header span");
+        let isSection1 = inputTarget.parentElement.matches(".ficha__linha-de-indicador--s1");
         if(isSection1) {
-            let inputTargetParentAndUncles = document.querySelectorAll(".ficha__seccao__body--1 > div");
-            let indexOfInputTargetParent;        
-            for(let i = 0; i < inputTargetParentAndUncles.length; i++) {
-                if(inputTarget.parentElement === inputTargetParentAndUncles[i]) {
-                    indexOfInputTargetParent = i - 1;
-                }
-            }
-            colunaOutput.textContent = colunas[indexOfInputTargetParent].textContent;
-        } else {
-            colunaOutput.textContent = inputTarget.parentElement.children[0].textContent;
+            colunas = document.querySelectorAll(".seccao-1__header__linha-de-indicadores span");
         }
+        let inputTargetIndex, inputTargetAndSiblings = inputTarget.parentElement.children;
+        for(let i = 0; i < inputTargetAndSiblings.length; i++) {
+            if(inputTargetAndSiblings[i] === inputTarget) inputTargetIndex = i - 1;
+        }
+        colunaOutput.textContent = colunas[inputTargetIndex].textContent;
     },
     retornarVazio() {
         const outputs = document.querySelectorAll(".reference__output");
@@ -44,7 +29,7 @@ function events() {
     inputsCelulares.forEach( inputCelular => {
         inputCelular.addEventListener("focus", () => {
             if(!inputCelular.matches("[readonly]")) {
-                referencia.retornarIndicador(inputCelular);
+                referencia.retornarLinha(inputCelular);
                 referencia.retornarColuna(inputCelular)
             }
         });

@@ -25,16 +25,38 @@ const totalizador = {
         if(inputTarget.dataset.totaleixox) {
             let classNameDosOperandos = inputTarget.dataset.totaleixox;
             inputTarget.classList.add(`${classNameDosOperandos}`);
-            let operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
-            let celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totaleixoxoutput}`);
+            const operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
+            const celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totaleixoxoutput}`);
+            const celulaDeSaida2 = document.querySelector(`.${inputTarget.dataset.totalcolsec1output}`);
             celulaDeSaida.value = this.somar(operandos); 
+            celulaDeSaida2.value = this.somar(operandos); 
         }     
-        if(inputTarget.dataset.totaleixoy) {
-            let classNameDosOperandos = inputTarget.dataset.totaleixoy;
+        if(inputTarget.dataset.totald) {
+            let classNameDosOperandos = inputTarget.dataset.totald;
             inputTarget.classList.add(`${classNameDosOperandos}`);
-            let operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
-            let celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totaleixoyoutput}`);
+            const operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
+            const celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totaldoutput}`);
             celulaDeSaida.value = this.somar(operandos);  
+        }
+        if(inputTarget.dataset.tbna) {
+            let classNameDosOperandos = inputTarget.dataset.tbna;
+            let classNameDeNotificados = classNameDosOperandos.split("-minus-")[0];
+            let classNameDosAvaliados = classNameDosOperandos.split("-minus-")[1];
+            const notificados = document.querySelector(`.${classNameDeNotificados}`);
+            const avaliados = document.querySelector(`.${classNameDosAvaliados}`);
+            let naoAvaliados = notificados.value - avaliados.value;
+            let celulaDeSaida = document.querySelector(`.${inputTarget.dataset.tbnaoutput}`);
+            celulaDeSaida.value = naoAvaliados;
+        }
+        if(inputTarget.dataset.totaltbna) {
+            let classNameDosOperandos = inputTarget.dataset.totaltbna;
+            let classNameDeNotificados = classNameDosOperandos.split("-minus-")[0];
+            let classNameDosAvaliados = classNameDosOperandos.split("-minus-")[1];
+            const notificados = document.querySelector(`.${classNameDeNotificados}`);
+            const avaliados = document.querySelector(`.${classNameDosAvaliados}`);
+            let naoAvaliados = notificados.value - avaliados.value;
+            let celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totaltbnaoutput}`);
+            celulaDeSaida.value = naoAvaliados;
         }
     },
     somar(celulasPorTotalizar) {
@@ -46,7 +68,7 @@ const totalizador = {
     },
 }
 function escutarEventos() {
-    const inputsCelulares = document.querySelectorAll("[data-totaleixox], [data-totaleixoy]");
+    const inputsCelulares = document.querySelectorAll("[data-totaleixox], [data-totald]");
     inputsCelulares.forEach( inputCelular => {
         inputCelular.addEventListener("input", () => totalizador.filtrarEtotalizarCelulas(inputCelular));
         inputCelular.value !== "" && totalizador.filtrarEtotalizarCelulas(inputCelular);

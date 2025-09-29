@@ -2,7 +2,7 @@
 
 ![Trecho do Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV](imagens/totalizador-de-resumo-trimestral-de-avaliacao-de-tto-de-tb-e-tb-hiv.png)
 
-O **Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV** é um serviço online gratuito que auxilia na elaboração do resumo trimestral de avaliação de tratamento de TB e TB/HIV por meio do cálculo automático dos totais com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+O **Totalizador de Resumo Trimestral de Avaliação de Tratamento de TB e TB/HIV** é um serviço online gratuito, que auxilia na elaboração do resumo trimestral de avaliação de tratamento de TB e TB/HIV por meio do cálculo automático dos totais com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.
 
 
 ## Objectivos

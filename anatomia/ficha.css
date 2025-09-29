@@ -44,8 +44,6 @@
 }
 .ficha__moldura-de-logo-de-pnct {
     margin-top: 7px;
-    width: 140px;
-    height: 55px;
 }
 .ficha__header__col-de-localizacao {
     display: grid;
@@ -84,7 +82,6 @@
 }
 .ficha__seccao__titulo {
     font-size: 12.5px;
-    letter-spacing: 1.5px;
     text-align: center;
     padding: 8px 0;
     text-transform: uppercase;
@@ -103,7 +100,7 @@
     grid-area: col-2;
     display: grid;
     grid-template-rows: 14px 141px;
-    background-color: var(--gray-c);
+    background-color: var(--gray-d);
 }
 .seccao-2__header__linha-com-numeros-das-colunas,
 .seccao-1__header__linha-de-indicadores {
@@ -134,42 +131,24 @@ span.seccao-1__header__indicador-col-3 {
         z-index: 20;
     }
 }
-.ficha__seccao__body {
+.ficha__linha-de-indicador-e-inputs,
+.ficha__seccao__header {
     display: grid;
-    grid-template-columns: 296px repeat(10, 63px) 1fr;
+    grid-template-columns: 296px repeat(11, 63px);
+    min-height: 24.5px;
 }
-.ficha__seccao__body--grid-template-cols-10 {
-    grid-template-columns: 422px repeat(9, 63px)
-}
-.ficha__col-de-indicadores,
-.ficha__col-de-inputs {
-    display: grid;
-    grid-template-rows: repeat(2, 24.5px) 28.5px repeat(6, 24.5px);
-}
-.ficha__col-de-indicadores__empty-cell {
-    background-color: var(--yt);
-}
-
-.ficha__col-de-inputs span {
+.ficha__seccao__header {
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
 }
-.ficha__col-de-indicadores--seccao-1,
-.ficha__col-de-inputs--seccao-1 {
-    grid-template-rows: 28.5px 24.5px 28.5px repeat(4, 24.5px);
+.ficha__linha-de-indicador-e-inputs span {
+    padding-left: 2px;
+    background-color: var(--gray-d);
 }
-.ficha__col-de-indicadores--seccao-2,
-.ficha__col-de-inputs--seccao-2 {
-    grid-template-rows: 24.5px repeat(2, 28.5px) repeat(6, 24.5px);
+.ficha__linha-de-indicador--s1 {
+    grid-template-columns: 422px repeat(9, 63px);
 }
-.ficha__col-de-indicadores span {
-    padding: 2px;
-    line-height: 1.05;
-}
-.ficha__col-de-inputs {
-    grid-template-columns: 63px;
-    overflow: hidden;
-}
+
 [data-totaleixox]:focus,
 [data-totaleixoy]:focus,
 .input-nao-celular:focus,
@@ -215,7 +194,7 @@ span.seccao-1__header__indicador-col-3 {
 }
 /* CLASSES REUTILIZÁVEIS */
 .celula-nao-aplicavel {
-    background-color: var(--gray-a);
+    background-color: var(--black);
 }
 .--cor-de-fundo-padrao {
     background-color: var(--gray-c);
